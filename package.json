@@ -1,14 +1,18 @@
 {
+  "homepage": "https://jscortes23.github.io/newsletter-sign-up-with-success-message-main",
   "name": "newsletter-sign-up-with-success-message-main",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "vite": "^5.0.8"
   },
   "dependencies": {
