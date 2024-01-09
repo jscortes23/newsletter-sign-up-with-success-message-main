@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Roboto bold';
+  src: url('../fonts/Roboto-Begular.ttf') format('truetype');
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  height: 100dvh;
+}
+
+.container {
+  width: min(100%, 86rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  background-color: var(--white);
+}
+
+.bg-illustration {
+  width: 100%;
+}
+
+.content-newsletter {
+  padding: 2.8rem 2rem;
+}
+
+.newslatter__title {
+  font-family: 'Roboto bold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--dark-stale-grey);
+  letter-spacing: -0.1rem;
+  margin-block-end: 1.6rem;
+}
+
+.newsletter__description {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-block-end: 1.8rem;
+}
+
+.newsletter__list {
+  display: grid;
+  row-gap: 1rem;
+  list-style: none;
+  margin-block-end: 3rem;
+}
+
+.newsletter__form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newsletter__form__input__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-block-end: 1rem;
+}
+
+.message--error {
+  color: var(--tomato);
+}
+
+.input--error {
+  background-color: rgba(255, 0, 0, 0.088);
+  color: var(--tomato);
+  border-color: var(--tomato);
+  outline-color: var(--tomato);
+}
+
+.newsletter__form__input {
+  font-family: inherit;
+  width: 100%;
+  border: 1px solid var(--grey);
+  border-radius: 0.6rem;
+  padding: 1.2rem 1.6rem;
+  margin-block-end: 1.8rem;
+}
+
+.newsletter__form__input::placeholder {
+  font-family: inherit;
+  color: var(--grey);
+}
+
+@media (min-width: 37.5rem) {
+  .container {
+    height: 90%;
+    padding: 2rem;
+    border-radius: 2.8rem;
+    box-shadow: 0 0 1.8rem var(--charcoal-grey);
+  }
+
+  .container > .bg-illustration {
+    order: 1;
+    justify-self: end;
+  }
+
+  .content-newsletter {
+    max-width: 40ch;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bg-illustration {
+    width: initial;
+    height: 100%;
+  }
+}

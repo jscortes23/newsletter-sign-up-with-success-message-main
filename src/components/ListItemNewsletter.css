@@ -1,0 +1,19 @@
+.newsletter__list__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-flow: column;
+  align-items: start;
+  column-gap: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.newsletter__list__item::before {
+  content: '';
+  width: 2rem;
+  aspect-ratio: 1;
+  background-image: url('../../images/icon-list.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
