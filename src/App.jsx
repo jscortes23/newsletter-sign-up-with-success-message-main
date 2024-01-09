@@ -5,8 +5,8 @@ import { ListItemNewsletter } from "./components/ListItemNewsletter"
 import { ModalSuccess } from "./components/ModalSuccess"
 
 export function App() {
-
   const [error, setError] = useState(null)
+  const [email, setEmail] = useState(null)
 
   const monthlyUpdate = [
     "Product discovery and building what matters",
@@ -20,8 +20,12 @@ export function App() {
     const data = Object.fromEntries(
       new window.FormData(e.target)
     )
-    if (validateEmail(data.email)) {
+
+    const {email: newEmail} = data
+
+    if (validateEmail(newEmail)) {
       setError(true)
+      setEmail(newEmail)
       return
     } else {
       setError(false)
@@ -34,7 +38,6 @@ export function App() {
 
     return regex.test(email)
   }
-
 
   return (
     <>
@@ -78,7 +81,7 @@ export function App() {
       </main>
       }
       {
-        error && <ModalSuccess emailSubscribed={"ash@loremcompany.com"} />
+        error && <ModalSuccess emailSubscribed={email} />
       }
 
     </>
