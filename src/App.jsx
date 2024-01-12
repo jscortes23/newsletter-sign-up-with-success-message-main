@@ -3,6 +3,8 @@ import './css/main.css'
 import { ButtonNewsletter } from "./components/ButtonNewsletter"
 import { ListItemNewsletter } from "./components/ListItemNewsletter"
 import { ModalSuccess } from "./components/ModalSuccess"
+import illustrationDesktop from "../images/illustration-sign-up-desktop.svg"
+import illustrationMobile from "../images/illustration-sign-up-mobile.svg"
 
 export function App() {
   const [error, setError] = useState(null)
@@ -44,9 +46,9 @@ export function App() {
     {!error &&
       <main className="container">
         <picture className="bg-illustration">
-          <source media="(min-width: 37.5rem)" srcSet="../images/illustration-sign-up-desktop.svg" />
-          <source media="(max-width: 37.5rem)" srcSet="../images/illustration-sign-up-mobile.svg" />
-          <img src="../images/illustration-sign-up-mobile.svg" alt="illustration" className="bg-illustration" />
+          <source media="(min-width: 37.5rem)" srcSet={illustrationDesktop} />
+          <source media="(max-width: 37.5rem)" srcSet={illustrationMobile} />
+          <img src={illustrationMobile} alt="illustration" className="bg-illustration" />
         </picture>
         <section className="content-newsletter">
           <h1 className="newslatter__title">Stay updated!</h1>
